@@ -11,12 +11,9 @@
  * Copyright 2007, 2008 Chris Wanstrath [ chris@ozmm.org ]
  *
 */
-
 (function($) {
   $.facebox = function(data, klass, settings) {
-		$.facebox.settings = $.facebox.defaultSettings;
 		$.facebox.settings = $.extend($.facebox.defaultSettings, settings);
-		$.each(($.facebox.settings), function(k,v) {alert(k+": "+ v);});
     $.facebox.loading();
     if (data.ajax) fillFaceboxFromAjax(data.ajax);
     else if (data.image) fillFaceboxFromImage(data.image);
